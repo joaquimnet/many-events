@@ -4,7 +4,7 @@
   "description": "Listen to and send events.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "events",
@@ -16,5 +16,8 @@
     "type": "git",
     "url": "https://github.com/joaquimnet/many-events.git"
   },
-  "homepage": "https://github.com/joaquimnet/many-events"
+  "homepage": "https://github.com/joaquimnet/many-events",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
 }
