@@ -1,4 +1,4 @@
-function Events(config) {
+function ManyEvents(config) {
   this.events = new Map();
   this.suppressMissingHandlerError = config && config.suppressMissingHandlerError;
 
@@ -38,4 +38,4 @@ function Events(config) {
   };
 }
 
-module.exports = Events;
+module.exports = ManyEvents;
