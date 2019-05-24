@@ -1,0 +1,20 @@
+{
+  "name": "many-events",
+  "version": "1.0.0",
+  "description": "Listen to and send events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "events",
+    "pubsub"
+  ],
+  "author": "Joaquim Neto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaquimnet/many-events.git"
+  },
+  "homepage": "https://github.com/joaquimnet/many-events"
+}
