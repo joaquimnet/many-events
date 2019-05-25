@@ -1,4 +1,6 @@
-# many-events
+# Many Events
+
+[![Build Status](https://travis-ci.com/joaquimnet/many-events.svg?branch=master)](https://travis-ci.com/joaquimnet/many-events)
 
 Listen to and send events.
 
