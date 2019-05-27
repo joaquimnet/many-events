@@ -36,6 +36,22 @@ test('should throw missing handler error after removing handler', () => {
   expect(count).toEqual(1);
 });
 
+test('should throw missing handler error after removing all handlers', () => {
+  let count = 0;
+  function increaseCount() {
+    count++;
+  }
+  function countAndThrow() {
+    const events = new ManyEvents();
+    events.on('increase-count', increaseCount);
+    events.send('increase-count', null);
+    events.removeAll('increase-count');
+    events.send('increase-count', null);
+  }
+  expect(countAndThrow).toThrow('Event increase-count not found.');
+  expect(count).toEqual(1);
+});
+
 test('should NOT throw missing handler error', () => {
   function thisWillThrow() {
     const events = new ManyEvents({ suppressMissingHandlerError: true });

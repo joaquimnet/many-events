@@ -1,6 +1,7 @@
 function ManyEvents(config) {
   this.events = new Map();
-  this.suppressMissingHandlerError = config && config.suppressMissingHandlerError;
+  this.suppressMissingHandlerError =
+    config && config.suppressMissingHandlerError;
 
   this.on = function(eventName, handler) {
     if (this.events.has(eventName)) {
@@ -10,6 +11,7 @@ function ManyEvents(config) {
     }
   };
 
+  // TODO: Add removeAll()
   this.remove = function(eventName, handler) {
     if (!handler) {
       throw new Error('Specify a event name and a event handler to remove.');
@@ -23,6 +25,15 @@ function ManyEvents(config) {
       } else {
         this.events.set(eventName, [...filteredHandlers]);
       }
+    }
+  };
+
+  this.removeAll = function(eventName) {
+    if (!eventName) {
+      throw new Error('Specify a event to remove.');
+    }
+    if (this.events.has(eventName)) {
+      this.events.delete(eventName);
     }
   };
 

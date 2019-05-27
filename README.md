@@ -82,3 +82,13 @@ Removes an event handler.
 - handler: Function
   - A reference to the function to be removed.
 - **Returns: void**
+
+---
+
+### **ManyEvents.removeAll(eventName);**
+
+Removes all handlers for an event.
+
+- eventName: String
+  - The event name.
+- **Returns: void**
