@@ -11,7 +11,6 @@ function ManyEvents(config) {
     }
   };
 
-  // TODO: Add removeAll()
   this.remove = function(eventName, handler) {
     if (!handler) {
       throw new Error('Specify a event name and a event handler to remove.');
