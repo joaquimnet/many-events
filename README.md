@@ -31,6 +31,10 @@ Example:
 
 The project is licensed under the MIT license.
 
+## Planned
+
+- Add middleware to modify event data
+
 ## API
 
 ### **new ManyEvents(options);**
