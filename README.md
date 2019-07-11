@@ -96,3 +96,51 @@ Removes all handlers for an event.
 - eventName: String
   - The event name.
 - **Returns: void**
+
+---
+
+### **ManyEvents.use(eventName, middleware);**
+
+Removes all handlers for an event.
+
+- eventName: String
+  - The event to which the middleware will be attached.
+- middleware: Function
+  - The middleware to be added.
+- **Returns: void**
+
+---
+
+### **ManyEvents.removeMiddleware(eventName, middleware);**
+
+Removes all handlers for an event.
+
+- eventName: String
+  - The event from which the middleware will be removed.
+- middleware: Function
+  - A reference to the middleware to be removed.
+- **Returns: void**
+
+---
+
+### **ManyEvents.removeAllMiddleware(eventName);**
+
+Removes all middleware for an event.
+
+- eventName: String
+  - The event name.
+- **Returns: void**
+
+---
+
+### **How a middleware looks**
+
+- The **data** argument will be either the original data sent by the event emitter or data modified by the previous middleware.
+- The **updateData** function will replace the data with whatever you pass into it.
+
+```javascript
+function middleware(data, updateData) {
+  // This function will update the data that will be passed to the next middleware and event handlers
+  updateData(data);
+}
+```
