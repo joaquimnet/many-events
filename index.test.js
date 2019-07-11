@@ -59,3 +59,52 @@ test('should NOT throw missing handler error', () => {
   }
   expect(thisWillThrow).not.toThrow();
 });
+
+test('can use middleware', done => {
+  function cookedJellybean() {
+    const events = new ManyEvents();
+    events.on('test', data => {
+      expect(data).toBe('cooked jellybean');
+      done();
+    });
+    events.use('test', (data, updateData) => {
+      if (data === 'cooked') updateData(data + ' jellybean');
+    });
+    events.send('test', 'cooked');
+  }
+  cookedJellybean();
+});
+
+test('data should unaltered after removing middleware', done => {
+  function cookedJellybean() {
+    const events = new ManyEvents();
+    events.on('test', data => {
+      expect(data).toBe('cooked');
+      done();
+    });
+    function cookTheJellybean(data, updateData) {
+      if (data === 'cooked') updateData(data + ' jellybean');
+    }
+    events.use('test', cookTheJellybean);
+    events.removeMiddleware('test', cookTheJellybean);
+    events.send('test', 'cooked');
+  }
+  cookedJellybean();
+});
+
+test('data should unaltered after removing all middleware', done => {
+  function cookedJellybean() {
+    const events = new ManyEvents();
+    events.on('test', data => {
+      expect(data).toBe('cooked');
+      done();
+    });
+    function cookTheJellybean(data, updateData) {
+      if (data === 'cooked') updateData(data + ' jellybean');
+    }
+    events.use('test', cookTheJellybean);
+    events.removeAllMiddleware('test');
+    events.send('test', 'cooked');
+  }
+  cookedJellybean();
+});
