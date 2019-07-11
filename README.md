@@ -101,7 +101,7 @@ Removes all handlers for an event.
 
 ### **ManyEvents.use(eventName, middleware);**
 
-Removes all handlers for an event.
+Add a middleware to an event. This middleware can modify data before it reaches the event handlers.
 
 - eventName: String
   - The event to which the middleware will be attached.
@@ -113,7 +113,7 @@ Removes all handlers for an event.
 
 ### **ManyEvents.removeMiddleware(eventName, middleware);**
 
-Removes all handlers for an event.
+Removes a middleware from an event.
 
 - eventName: String
   - The event from which the middleware will be removed.
