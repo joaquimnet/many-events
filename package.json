@@ -4,7 +4,8 @@
   "description": "Listen to and send events.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
   },
   "keywords": [
     "events",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/joaquimnet/many-events",
   "devDependencies": {
+    "codacy-coverage": "^3.4.0",
     "jest": "^24.8.0"
   }
 }
