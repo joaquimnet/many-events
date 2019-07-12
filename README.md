@@ -1,5 +1,6 @@
 # Many Events
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ad6fba55db77486aba3449772bf94200)](https://app.codacy.com/app/joaquimnet/many-events?utm_source=github.com&utm_medium=referral&utm_content=joaquimnet/many-events&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://travis-ci.com/joaquimnet/many-events.svg?branch=master)](https://travis-ci.com/joaquimnet/many-events)
 
 Listen to and send events.
