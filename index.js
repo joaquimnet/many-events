@@ -19,7 +19,7 @@ function ManyEvents(config) {
   };
 
   this.remove = function(eventName, handler) {
-    if (!handler) {
+    if (!eventName || !handler) {
       throw new Error('Specify a event name and a event handler to remove.');
     }
     if (this.events.has(eventName)) {
@@ -36,7 +36,7 @@ function ManyEvents(config) {
 
   this.removeAll = function(eventName) {
     if (!eventName) {
-      throw new Error('Specify a event to remove.');
+      throw new Error('Specify a event to remove handlers from.');
     }
     if (this.events.has(eventName)) {
       this.events.delete(eventName);
