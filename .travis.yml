@@ -1,4 +1,4 @@
 language: node_js
-script: npm test-with-coverage
+script: npm run test-with-coverage
 node_js:
   - "lts/*"
