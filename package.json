@@ -1,6 +1,6 @@
 {
   "name": "many-events",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Listen to and send events.",
   "main": "index.js",
   "scripts": {
