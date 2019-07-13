@@ -39,6 +39,7 @@ The constructor for a new event bus.
 
 -   options: Object
     -   The configuration object
+
 -   **Returns: ManyEvents instance**
 
 **Options object:**
@@ -144,7 +145,6 @@ Removes all middleware for an event.
 ### **How a middleware looks**
 
 -   The **data** argument will be either the original data sent by the event emitter or data modified by the previous middleware.
-
 -   The **updateData** function will replace the data with whatever you pass into it.
 
 ```javascript
