@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/joaquimnet/many-events",
   "devDependencies": {
-    "codacy-coverage": "^3.4.0",
-    "jest": "^24.8.0"
+    "codacy-coverage": "~3.4.0",
+    "jest": "~24.8.0"
   }
 }
