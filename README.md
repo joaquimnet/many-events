@@ -23,6 +23,10 @@ eventBus.on('my-amazing-event', doSomething);
 eventBus.send('my-amazing-event', 'peanut butter'); // output -> peanut butter
 ```
 
+## Disclaimer
+
+This is being made for educational purposes and it's not meant for production.
+
 ## Installation
 
 `npm i many-events`
